@@ -1,8 +1,8 @@
 function SectionOne() {
   return (
     <div className="text-center">
-      <h1 className="text-5xl text-yellow-600 py-6">Welcome</h1>
-      <div className="px-8 md:px-36 py-3">
+      <h1 className="text-3xl md:text-5xl text-yellow-600 py-6">Welcome</h1>
+      <div className="px-8 text-l md:px-36 md:py-3">
         Welcome to our gift haven, where the art of giving takes center stage.
         At our online destination, we celebrate the joy and sentiment behind the
         act of gifting, recognizing it as a timeless expression of love,

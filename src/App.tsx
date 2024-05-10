@@ -3,11 +3,12 @@ import SectionTwo from "./components/content/SectionTwo";
 import Footer from "./components/footer/Footer";
 import NavComponent from "./components/navbar/FlowbiteNav";
 import SwiperComponent from "./components/swiper/MainSwiper";
+import Newsletter from "./pages/Newsletter"
 
 function App() {
   return (
     <div className="bg-yellow-100 font-custom tracking-widest">
-      <NavComponent />
+      
       <div className="relative">
         <h2 className="absolute inset-0 text-3xl text-yellow-600">
           Select perfect gift for you
@@ -16,7 +17,8 @@ function App() {
       </div>
       <SectionOne />
       <SectionTwo />
-      <Footer />
+      <Newsletter/>
+      
     </div>
   );
 }
