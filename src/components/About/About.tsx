@@ -13,16 +13,17 @@ export default function About() {
                   </div>
                   <div className="md:7/12 lg:w-6/12">
                       <h2 className="text-2xl text-gray-900 font-bold md:text-4xl">
-                          React development is carried out by passionate developers
+                            Thinking inside the box to enrich relationships
                       </h2>
                       <p className="mt-6 text-gray-600">
-                          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum omnis voluptatem
-                          accusantium nemo perspiciatis delectus atque autem! Voluptatum tenetur beatae unde
-                          aperiam, repellat expedita consequatur! Officiis id consequatur atque doloremque!
+                            Our Story
+                            We are a group of passionate creative artist, whose love for art and human values grow in parallel.Our values are deep rooted in an inclusive environment, where in each of the team member is empowered and guided to make the right choice for the benefit of all, including mother nature.
+
+                            We endeavor to model our business for social and environmental protection.
+                            Our continuous effort is to bring out the best in every one, by unique collaboration between talented artisan and aspiring customer. We realize we must celebrate life every day by creating every day as a festival season for all connected.
                       </p>
                       <p className="mt-4 text-gray-600">
-                          Nobis minus voluptatibus pariatur dignissimos libero quaerat iure expedita at?
-                          Asperiores nemo possimus nesciunt dicta veniam aspernatur quam mollitia.
+                      Parkhaventure is created in 2024 with the thought of crafting premium luxury gifts for every occasion, big or small to express appreciation and make someone feel valued. Our hampers are thoughtfully curated and personalized to each individual, ensuring that each one is truly special.
                       </p>
                   </div>
               </div>

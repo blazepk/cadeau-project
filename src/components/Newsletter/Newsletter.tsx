@@ -1,3 +1,4 @@
+
 import { LuMail } from "react-icons/lu"
 
 const Newsletter = () => {

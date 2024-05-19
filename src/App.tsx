@@ -3,7 +3,7 @@ import SectionTwo from "./components/content/SectionTwo";
 import Footer from "./components/footer/Footer";
 import NavComponent from "./components/navbar/FlowbiteNav";
 import SwiperComponent from "./components/swiper/MainSwiper";
-import Newsletter from "./pages/Newsletter"
+
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
       </div>
       <SectionOne />
       <SectionTwo />
-      <Newsletter/>
+      
       
     </div>
   );
