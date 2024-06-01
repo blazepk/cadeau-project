@@ -4,9 +4,9 @@ import ReactDOM from 'react-dom/client'
 import { RouterProvider, createBrowserRouter, createRoutesFromElements,Route } from 'react-router-dom'
 import './index.css'
 import Layout from './Layout.tsx';
-
-import About from './components/About/About.tsx'
-import Contact from './components/Contact/Contact.tsx'
+import Services from './pages/Services/Services.tsx'
+import About from './pages/About/About.tsx'
+import Contact from './pages/Contact/Contact.tsx'
 import App from './App.tsx';
 
 const router= createBrowserRouter(
@@ -15,6 +15,7 @@ const router= createBrowserRouter(
   <Route path= '/' element={<Layout />}>
     <Route path= '' element={<App />} />
     <Route path= 'About' element={<About />} />
+    <Route path= 'Services' element={<Services />} />
     <Route path= 'Contact' element={<Contact />} />
     </Route>
     )
