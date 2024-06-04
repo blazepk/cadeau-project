@@ -1,11 +1,43 @@
-import { useState } from "react" ;
+
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
+import {useForm} from 'react-hook-form' 
+import { z } from "zod"
+import{ zodResolver } from "@hookform/resolvers/zod"
+
+const schema= z.object({
+  fullName:z.string()
+            .min(3,"name is required"),
+            
+  email:z.string().min(1,"Email is a required").email("this is not a valid Email")
+});
 
 
-function Contact() {
-  const [email, setEmail] = useState("")
-  const [fullName, setName] = useState("")
+type FormValues = z.infer<typeof schema>;
+
+
+
+  
+
+  function Contact() {
+
+  const {register, handleSubmit, formState:{ errors} } = useForm<FormValues>({
+    defaultValues:{
+      fullName:" ",
+      email:" "
+    },
+    resolver: zodResolver(schema)}
+  );
+
+ 
+
+  const onSubmit = (data:FormValues) => {
+    console.log(data);
+  };
+    
+  
+  
+
   return (
     <div className="grid grid-cols-12 bg-white w-full">
       <div className="min-h-[100px] rounded  bg-yellow-700 w-full shadow-xl text-white  col-span-5">
@@ -41,32 +73,30 @@ function Contact() {
           </div>
         </div>
       </div>
-      <div className="bg-white min-h-[100px] rounded w-full shadow-xl  text-teal-600 col-span-7 p-5">
-        <form action="" className="flex flex-col space-y-4">
+      <div onSubmit={handleSubmit(onSubmit)} className="bg-white min-h-[100px] rounded w-full shadow-xl  text-teal-600 col-span-7 p-5">
+        <form  className=" form flex flex-col space-y-4" >
           <div className="font-bold text-xl text-center">
             Kindly enter your details
           </div>
           <div>
-            <label className="text-sm">Your Name</label>
+            <label className="text-sm">Name</label>
             <input
-              value ={fullName}
-              onChange={(e) => setName(e.target.value)}
               type="text"
-              required
-              placeholder="your Name"
+          
+              id="your Name" {...register ("fullName",{ pattern: /^[A-Za-z]+$/i })}
               className="min-h-[50px] ring-1 ring-gray-300 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-teal-300"
             />
+             {errors.fullName && <span className="text-red" >{errors?.fullName?.message}</span>}
+            
           </div>
           <div>
-            <label className="text-sm">Email Address</label>
+            <label className="text-sm">Email</label>
             <input
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              type="email"
-              required
-              placeholder="Your Email"
-              className="ring-1 ring-gray-300 w-full rounded-md px-4 py-4 mt-2 outline-none focus:ring-2 focus:ring-teal-300"
+             type="email"
+             id="email" {...register("email")}
+               className="ring-1 ring-gray-300 w-full rounded-md px-4 py-4 mt-2 outline-none focus:ring-2 focus:ring-teal-300"
             />
+            {errors.email && <span>{errors?.email?.message}</span>}
           </div>
           <div>
             <label className="text-sm">Message</label>
@@ -77,7 +107,7 @@ function Contact() {
             ></textarea>
           </div>
           <div className="flex items-center justify-center">
-            <button className="inline-block self-end bg-yellow-400 text-teal font-bold rounded-lg px-6 py-2 uppercase-sm">
+            <button type= "submit" className="inline-block self-end bg-yellow-400 text-teal font-bold rounded-lg px-6 py-2 uppercase-sm">
               Send Message
             </button>
           </div>

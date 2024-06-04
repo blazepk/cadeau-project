@@ -3,7 +3,7 @@ import React from 'react'
 function Services() {
   return (
     <>
-    < div className="grid grid-cols-12 p-6 bg-white">
+    < div className="grid grid-cols-12 p-6 gap-x-3 bg-white">
           <div className="min-h-[100px] rounded  bg-yellow-100 w-full shadow-xl p-4 text-white  col-span-6">
           <div className="p-4 text-center flex flex-col justify-around h-full">
           <div className="flex flex-col gap-y-2">
@@ -31,7 +31,7 @@ function Services() {
           
           
     </div>
-    < div className="grid grid-cols-12 p-6 bg-white">
+    < div className="grid grid-cols-12 p-6 gap-x-3 bg-white">
           <div className="min-h-[100px] rounded  bg-yellow-100 w-full shadow-xl p-4 text-white  col-span-6">
           <div className="p-4 text-center flex flex-col justify-around h-full">
           <div className="flex flex-col gap-y-2">
@@ -60,7 +60,7 @@ value for your investment
           
           
     </div>
-    < div className="grid grid-cols-12 p-6 bg-white">
+    < div className="grid grid-cols-12 p-6 gap-x-3 bg-white">
           <div className="min-h-[100px] rounded  bg-yellow-100 w-full shadow-xl col-p-4  text-white  col-span-6">
           <div className="p-4 text-center flex flex-col justify-around h-full">
           <div className="flex flex-col gap-y-2">

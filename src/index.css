@@ -7,7 +7,16 @@
   .icon_wrapper {
     @apply border border-gray-400 rounded-full w-[50px] h-[50px] grid place-items-center text-[22px];
   }
-};
+
+
+  }
+  @layer components{
+    .error {
+      color:red;
+      font-size:12px;
+      text-align: left;
+    }
+  }
 
 .swiper-image-container {
   position: relative;
