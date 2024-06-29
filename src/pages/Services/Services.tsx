@@ -50,11 +50,11 @@ interface IServiceData {
 
 function ServiceCard({ title, description }: IServiceData) {
   return (
-    <div className="min-h-[100px] rounded  bg-yellow-100 w-full shadow-xl p-4 text-white  col-span-6">
+    <div className="min-h-[100px] rounded  bg-brown-400 w-full shadow-xl p-4 text-white  col-span-6">
       <div className="p-4 text-center flex flex-col justify-around h-full">
         <div className="flex flex-col gap-y-2">
-          <h2 className="text-l text-teal-900 font-bold md:text-xl">{title}</h2>
-          <p className="mt-6 text-teal-600">{description}</p>
+          <h2 className="text-l text-blue font-bold md:text-xl">{title}</h2>
+          <p className="mt-6 text-brown-900">{description}</p>
         </div>
       </div>
     </div>

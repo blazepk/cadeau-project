@@ -2,6 +2,13 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 
 //
+import gift_1 from '../../assets/blue_gift2.avif'
+import gift_2 from '../../assets/yellow_gift1.avif'
+import gift_3 from '../../assets/ribbon_brown.avif'
+import gift_4 from '../../assets/brown-gift_275559-4172.jpg'
+import gift_7 from '../../assets/gift_12.avif'
+import gift_8 from '../../assets/gift_13.avif'
+
 import {
   Navigation,
   Pagination,
@@ -17,32 +24,35 @@ import "swiper/css/scrollbar";
 
 const images = [
   {
-    src: "6CfTRMk3MN0",
+    src: gift_1,
     id: 1,
     alt: "image-1",
+    review:'Handmade Products at your Door'
   },
   {
-    src: "id46coi1X2I",
+    src: gift_2,
     id: 2,
     alt: "image-2",
+    review:'Versatility for Every Occasion'
   },
   {
-    src: "ja_GtYepi88",
+    src: gift_3,
     id: 3,
     alt: "image-3",
+    review:'Versatility for Every Occasion'
   },
   {
-    src: "fuZWqL1C2rM",
+    src: gift_4,
     id: 4,
     alt: "image-4",
   },
   {
-    src: "3hvpymDO7ZI",
+    src:gift_7,
     id: 5,
     alt: "image-5",
   },
   {
-    src: "Tqm4Ius4TyA",
+    src: gift_8,
     id: 6,
     alt: "image-6",
   },
@@ -51,12 +61,13 @@ const images = [
 const SwiperComponent = () => {
   return (
     <Swiper
-      className="bg-yellow-100 relative"
+      className=" bg-spot-pink  relative"
       modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
       spaceBetween={0}
       slidesPerView={1}
       navigation
       centeredSlides={true}
+      
       //   breakpoints={{
       //     // when window width is >= 320px
       //     320: {
@@ -84,17 +95,33 @@ const SwiperComponent = () => {
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log("slide change")}
     >
-      {images.map((item) => (
-        <SwiperSlide key={item.id} className="max-h-[700px]">
-          <div className="swiper-image-container">
-            <img
-              className="swiper-image"
-              src={`https://source.unsplash.com/${item.src}`}
+      {images.map((item,index) => (
+        <div>
+        <SwiperSlide>
+        <div key={index} className=" container relative sm:min-ph-[25vh] sm:h-[45vh] sm:max-h-[50vh] bg-cover bg-right">
+          
+          <div className=' py-8 sm:py-0 sm:flex justify-between items-center w-full h-full'>
+            
+            <div className="swiper-image-container w-full h-full">
+              <div className='flex items-center h-full'>
+
+             
+                <img
+              className="swiper-image flex items-center w-full h-full"
+              src={item.src}
               alt={item.alt}
-            />
+                />
+              </div>
+            </div>
+             
+              
+           
           </div>
+         </div> 
         </SwiperSlide>
+        </div>
       ))}
+
     </Swiper>
   );
 };

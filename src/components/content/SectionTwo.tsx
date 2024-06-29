@@ -42,11 +42,11 @@ const cards = [
 
 function SectionTwo() {
   return (
-    <div className="my-3">
-      <h5 className="text-4xl text-yellow-600 py-2 text-center">
+    <div className=" bg-brown-300 my-3">
+      <h5 className="text-4xl text-brown-900 py-2 text-center">
         Our Offerings
       </h5>
-      <div className="grid grid-cols-3 items-center justify-between gap-y-4 gap-x-4 px-4 md:px-20">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-center justify-between gap-y-4 gap-x-4 px-4 ">
         {cards.map((card) => (
           <Card
             key={card.id}

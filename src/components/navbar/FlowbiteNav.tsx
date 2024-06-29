@@ -1,21 +1,18 @@
-import Dlogo from '../../assets/AbstractWaves.png';
+import Dlogo from '../../assets/Logo.jpeg';
 import { Link, NavLink } from 'react-router-dom'
-
-import { BsSearch } from "react-icons/bs"
-import { AiOutlineUser } from "react-icons/ai";
-import { RiShoppingBag3Line } from "react-icons/ri"
 
 function NavComponent() {
  
   return (
-    <nav className="bg-yellow-100 border-gray-200 dark:bg-gray-900">
-      < div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    
+    <nav className="sticky w-full px-4 py-2 top-0 bg-white md:bg-brown-900 border-gray-300  z-50 shadow-lg">
+      < div className="container max-w-screen-xl flex flex-wrap  items-center justify-between mx-auto py-2  ">
         <Link to ="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <img src={Dlogo} className="h-8" alt="Navbar Logo" />
           
           
-          <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white text-yellow-600">
-            ParkhaVentures
+          <span className="self-center text-3xl font-semibold whitespace-nowrap  text-blue">
+            Parkha Ventures
           </span>
         </Link>
         < div className="flex items-center lg:order-2">
@@ -23,7 +20,7 @@ function NavComponent() {
         <button
           data-collapse-toggle="navbar-default"
           type="button"
-          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-blue rounded-lg md:hidden hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 "
           aria-controls="navbar-default"
          
          
@@ -47,15 +44,17 @@ function NavComponent() {
         </button>
         
 
-        <div className="hidden w-full md:block md:w-auto" id="navbar-default">
+        <div className="hidden w-full md:block md:w-auto " id="navbar-default">
 
-          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg  md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0  dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+          <ul className="  flex flex-col p-4 md:p-0 mt-4 border border-gray-300 rounded-lg  md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 ">
            
             <li>
               <NavLink to ="/"
                 className={({isActive}) => 
-                  `block py-2 px-3 text-white ${isActive ? "text-orange-700" : "text-gray-700"} bg-yellow-700 rounded md:bg-transparent md:text-yellow-700 md:p-0 dark:text-white md:dark:text-yellow-500"
-                aria-current="page"`} >
+                  { console.log("home",isActive)
+                    return ` font-bold block py-2 px-3 rounded ${isActive ? "text-orange" : "text-blue"} bg-gray-300 rounded md:bg-transparent md:p-0 
+                `
+                  }} >
                 
               
                 Home
@@ -64,7 +63,10 @@ function NavComponent() {
             <li>
               <NavLink to ="/About"
                 
-                className={({isActive}) => `block py-2 px-3 text-gray-900 rounded ${isActive ? "text-orange-700" : "text-gray-700"} hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-yellow-700 md:p-0 dark:text-white md:dark:hover:text-yellow-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent`}
+                className={({isActive}) => {
+                  console.log("about",isActive)
+                  return `font-bold block py-2 px-3 rounded ${isActive ? "text-orange" : "text-blue"} hover:bg-gray-300 md:hover:bg-transparent md:border-0 md:hover:text-yellow md:p-0 `}
+                }
 
               >
                 About
@@ -72,7 +74,7 @@ function NavComponent() {
             </li>
             <li>
               <NavLink to  ="/Services"
-                className={({isActive}) => `block py-2 px-3 text-gray-900 rounded ${isActive ? "text-orange-700" : "text-gray-700"} hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-yellow-700 md:p-0 dark:text-white md:dark:hover:text-yellow-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent`}
+                className={({isActive}) => `font-bold block py-2 px-3 rounded ${isActive ? "text-orange" : "text-blue"} hover:bg-gray-300 md:hover:bg-transparent md:border-0 md:hover:text-yellow md:p-0 `}
               >
                 Services
               </NavLink>
@@ -80,7 +82,9 @@ function NavComponent() {
             
             <li>
               <NavLink to ="/Contact"
-                className= {({isActive})=> `block py-2 px-3 text-gray-900 rounded ${isActive ? "text-orange-700" : "text-gray-700"} hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-yellow-700 md:p-0 dark:text-white md:dark:hover:text-yellow-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent`}
+                className= {({isActive})=> {
+                  console.log("contact",isActive)
+                  return ` font-bold block py-2 px-3 rounded ${isActive ? "text-orange" : "text-blue"} hover:bg-gray-300 md:hover:bg-transparent md:border-0 md:hover:text-yellow md:p-0`}}
               >
                 Contact
               </NavLink>

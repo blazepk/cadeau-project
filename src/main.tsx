@@ -8,6 +8,7 @@ import Services from './pages/Services/Services.tsx'
 import About from './pages/About/About.tsx'
 import Contact from './pages/Contact/Contact.tsx'
 import App from './App.tsx';
+import Privacy from './pages/Privacy/Privacy.tsx'
 
 const router= createBrowserRouter(
   createRoutesFromElements(
@@ -17,6 +18,7 @@ const router= createBrowserRouter(
     <Route path= 'About' element={<About />} />
     <Route path= 'Services' element={<Services />} />
     <Route path= 'Contact' element={<Contact />} />
+    <Route path= 'Policies' element={<Privacy />} />
     </Route>
     )
 )
