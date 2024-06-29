@@ -2,7 +2,6 @@ import Dlogo from '../../assets/Logo.jpeg';
 import { Link, NavLink } from 'react-router-dom'
 
 function NavComponent() {
- 
   return (
     
     <nav className="sticky w-full px-4 py-2 top-0 bg-white md:bg-brown-900 border-gray-300  z-50 shadow-lg">
@@ -25,24 +24,25 @@ function NavComponent() {
          
          
         >
-          <span className="sr-only">Open main menu</span>
-          <svg
-            className="w-5 h-5"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 17 14"
-          >
-            <path
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M1 1h15M1 7h15M1 13h15"
-            />
-          </svg>
-        </button>
-        
+          
+          
+            <span className="sr-only">Open main menu</span>
+            <svg
+              className="w-5 h-5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 17 14"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M1 1h15M1 7h15M1 13h15"
+              />
+            </svg>
+          </button>
 
         <div className="hidden w-full md:block md:w-auto " id="navbar-default">
 
@@ -90,17 +90,9 @@ function NavComponent() {
               </NavLink>
             </li>
             </ul>
-          
-          
-         </div>
+          </div>
         </div>
-         
       </div>
-              
-
-            
-           
-          
     </nav>
   );
 }
