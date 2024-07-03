@@ -1,5 +1,5 @@
 import React from 'react'
-
+import gift_15 from '../../assets/gift_15.jpg'
 
 export default function About() {
   return (
@@ -9,8 +9,9 @@ export default function About() {
                   <div className="md:w-5/12 lg:w-7/12">
                       <img
                           src='https://www.technik-medien.at/wp_contents/uploads/2020/04/gift-1420830_1280.jpg'
-                          alt="image"
+                          alt="image" className='rounded-xl mx-auto mb-4'
                       />
+                      <img src= {gift_15}  alt='' className='rounded-xl mx-auto mb-4'/>
                   </div>
                   <div className="md:7/12 lg:w-6/12">
                       <h2 className="text-2xl text-brown-500 font-bold md:text-4xl">

@@ -1,13 +1,13 @@
-import FlowbiteNav from "./components/navbar/FlowbiteNav.tsx";
-import Footer from "./components/footer/Footer.tsx";
+import FlowbiteNav1 from "./components/navbar/FlowbiteNav1.tsx";
+import Footer1 from "./components/footer/Footer1.tsx";
 import { Outlet } from "react-router-dom";
 
 function Layout() {
   return (
     <>
-      <FlowbiteNav />
+      <FlowbiteNav1 />
       <Outlet />
-      <Footer />
+      <Footer1 />
     </>
   );
 }

@@ -1,12 +1,23 @@
+import React from 'react'
+import { useState ,useEffect} from 'react';
 import Dlogo from '../../assets/Logo.jpeg';
 import { Link, NavLink } from 'react-router-dom'
 
-function NavComponent() {
+const FlowbiteNav1 = () => {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleMenu = () => {
+      setIsOpen(!isOpen);
+    };
+    const closeMenu = () => {
+      setIsOpen(false);
+    };
+
   return (
-    
-    <nav className="sticky w-full px-4 py-2 top-0 bg-white md:bg-brown-900 border-gray-300  z-50 shadow-lg">
-      < div className="container max-w-screen-xl flex flex-wrap  items-center justify-between mx-auto py-2  ">
-        <Link to ="/" className="flex items-center space-x-3 rtl:space-x-reverse">
+    <nav className="sticky w-full px-4 py-2 top-0  bg-brown-900 border-gray-300  z-50 shadow-lg ">
+    <div className="container mx-auto flex justify-between items-center">
+      <div className="flex items-center">
+      <Link to ="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <img src={Dlogo} className="h-8" alt="Navbar Logo" />
           
           
@@ -14,37 +25,8 @@ function NavComponent() {
             Parkha Ventures
           </span>
         </Link>
-        < div className="flex items-center lg:order-2">
-                        
-        <button
-          data-collapse-toggle="navbar-default"
-          type="button"
-          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-blue rounded-lg md:hidden hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 "
-          aria-controls="navbar-default"
-         
-         
-        >
-          
-          
-            <span className="sr-only">Open main menu</span>
-            <svg
-              className="w-5 h-5"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 17 14"
-            >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M1 1h15M1 7h15M1 13h15"
-              />
-            </svg>
-          </button>
-
-        <div className="hidden w-full md:block md:w-auto " id="navbar-default">
+      </div>
+      <div className="hidden w-full md:block md:w-auto " id="navbar-default">
 
           <ul className="  flex flex-col p-4 md:p-0 mt-4 border border-gray-300 rounded-lg  md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 ">
            
@@ -52,8 +34,8 @@ function NavComponent() {
               <NavLink to ="/"
                 className={({isActive}) => 
                   { console.log("home",isActive)
-                    return ` font-bold block py-2 px-3 rounded ${isActive ? "text-orange" : "text-blue"} bg-gray-300 rounded md:bg-transparent md:p-0 
-                `
+                    return ` font-bold block py-2 px-3 rounded ${isActive ? "text-orange" : "text-blue"} bg-gray-300 rounded md:bg-transparent md:p-0`
+                
                   }} >
                 
               
@@ -91,10 +73,32 @@ function NavComponent() {
             </li>
             </ul>
           </div>
-        </div>
+      <div className="md:hidden">
+        <button onClick={toggleMenu} className="text-white focus:outline-none">
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16m-7 6h7"}></path>
+          </svg>
+        </button>
       </div>
-    </nav>
-  );
-}
+    </div>
+    {isOpen && (
+      
+        
+        <div className="md:hidden mt-2 basis-full">
 
-export default NavComponent;
+          <NavLink to ="/" className="block text-white py-2 px-4 hover:bg-gray-700" onClick={closeMenu}>Home</NavLink>
+          <NavLink to ="/About"className="block text-white py-2 px-4 hover:bg-gray-700" onClick={closeMenu}>About Us</NavLink>
+          <NavLink to  ="/Services" className="block text-white py-2 px-4 hover:bg-gray-700" onClick={closeMenu}>Services</NavLink>
+           <NavLink to ="/Contact" className="block text-white py-2 px-4 hover:bg-gray-700" onClick={closeMenu}>Contact</NavLink>
+        </div>
+      )}
+
+ 
+  
+  </nav>
+);
+};
+  
+
+
+export default FlowbiteNav1

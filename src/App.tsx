@@ -1,4 +1,4 @@
-import Testimony from "./components/Testimony/Testimony";
+import TestimonialSlider from "./components/Testimony/TestimonialSlider";
 import SectionOne from "./components/content/SectionOne";
 import SectionTwo from "./components/content/SectionTwo";
 import AutoScrolling from "./components/AutoScrolling/AutoScrolling";
@@ -17,7 +17,7 @@ function App() {
       </div>
       <SectionOne />
       <SectionTwo />
-      <Testimony />
+      <TestimonialSlider />
       <AutoScrolling />
     </div>
   );

@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 import gift_1 from '../../assets/blue_gift2.avif'
 import gift_2 from '../../assets/yellow_gift1.avif'
-import gift_3 from '../../assets/ribbon_brown.avif'
+import gift_3 from '../../assets/gift_0.jpeg'
 import gift_4 from '../../assets/brown-gift_275559-4172.jpg'
 
 const slides = [

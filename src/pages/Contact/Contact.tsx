@@ -1,9 +1,10 @@
 
-import { FaFacebook } from "react-icons/fa";
+import { FaFacebook ,FaWhatsapp} from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
 import {useForm} from 'react-hook-form' 
 import { z } from "zod"
 import{ zodResolver } from "@hookform/resolvers/zod"
+
 
 const schema= z.object({
   fullName:z.string().regex(new RegExp(/^[A-Za-z]+$/i),"name should contain Alphabets")
@@ -39,9 +40,9 @@ type FormValues = z.infer<typeof schema>;
   
 
   return (
-    <div className="grid grid-cols-12 bg-brown-400 w-full">
-      <div className="min-h-[100px] rounded  bg-brown-400 w-full shadow-xl text-brown-900  col-span-6">
-        <div className="p-4 text-center flex flex-col justify-aroud h-full">
+    <div className="w-full mx-auto flex flex-col md:flex-row  gap-0  justify-between">
+      <div className="min-h-[100px] flex flex-col bg-brown-400 w-full shadow-xl text-brown-900  ">
+        <div className="p-4 text-center flex flex-col justify-around h-full">
           <div className="flex flex-col gap-y-2">
             <h1 className="font-bold text-4xl tracking-wide">Contact Us</h1>
             <p className=" text-blue text-l">
@@ -52,13 +53,13 @@ type FormValues = z.infer<typeof schema>;
             </p>
           </div>
           <div className="flex flex-col gap-y-3">
-            <div className="">+91 83619 41810 <br></br>
+            <div className="text-3xl flex flex-row text-center justify-center"> +91 83619 41810 <br></br>
             +91 99203 64165</div>
             <div className="">
               <span className="font-bold">Email</span> : parkhaventure@gmail.com
             </div>
             <div className="">
-              <span className="font-bold">Address</span>:5, Devendra Smurti
+              <span className="font-bold">Address:</span> 5, Devendra Smurti
                 Opp.Janseva Bank
                 Kasturba X Road, Borivali (East)
                 Mumbai - 401034
@@ -67,16 +68,24 @@ type FormValues = z.infer<typeof schema>;
 
           <div className="flex gap-x-4 text-4xl text-blue">
             <a
-              href="https://www.facebook.com/pratyush.khandelwal.7"
+              href="https://www.facebook.com/profile.php?id=61561580347706&mibextid=ZbWKwL"
               target="_blank"
             >
               <FaFacebook />
             </a>
+            <a
+             
+              href="https://www.instagram.com/parkhaventure?igsh=MWgxN3R3Z3VvNnU4OA=="
+            >
             <FaInstagramSquare />
+            </a>
+            <a href="https://wa.me/918369141810?text=Hello,How can I help You?"
+            target="_blank" ><FaWhatsapp /></a>
+            
           </div>
         </div>
       </div>
-      <div onSubmit={handleSubmit(onSubmit)} className="bg-blue min-h-[100px] rounded w-full shadow-xl  text-brown-900 col-span-6 p-5">
+      <div onSubmit={handleSubmit(onSubmit)} className="bg-blue min-h-[100px] w-full shadow-xl flex flex-col text-brown-900  p-4">
         <form  className=" form flex flex-col space-y-4" >
           <div className="font-bold text-xl text-center">
             Kindly enter your details
