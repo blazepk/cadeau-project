@@ -4,11 +4,13 @@ import { Outlet } from "react-router-dom";
 
 function Layout() {
   return (
-    <>
+    <div className="bg-brown-300">
       <FlowbiteNav1 />
-      <Outlet />
+      <div className=" max-w-screen-2xl mx-auto ">
+        <Outlet />
+      </div>
       <Footer1 />
-    </>
+    </div>
   );
 }
 

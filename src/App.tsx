@@ -11,7 +11,7 @@ function App() {
     <div className="bg-brown-300 font-custom  tracking-widest">
       <div className="relative mt-0">
         <h2 className="relative inset-1 text-3xl text-center py-4 text-brown-900">
-        "Thoughtful Gestures for Business Relationships"
+          "Thoughtful Gestures for Business Relationships"
         </h2>
         <SimpleSlider />
       </div>

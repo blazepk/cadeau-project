@@ -1,9 +1,5 @@
-import React from 'react'
-
 const Policies = () => {
-  return (
-    <div>Policies</div>
-  )
-}
+  return <div>Policies</div>;
+};
 
-export default Policies
+export default Policies;
