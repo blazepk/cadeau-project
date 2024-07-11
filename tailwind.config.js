@@ -7,7 +7,7 @@ export default {
     extend: {
       container:{
         center: true,
-        padding:"10px",
+        padding:"0px",
       },
       
       fontFamily: {
@@ -49,7 +49,10 @@ export default {
 
   },
   
-  plugins: [],
+  plugins: [
+    
+
+  ],
 
   }
 }

@@ -38,8 +38,9 @@ const SimpleSlider = () => {
   };
 
   return (
-    <div className="container h-100 mx-auto bg-brown-300 ">
-      <Slider {...settings}>
+    
+    <div className=" container bg-brown-300 overflow-hidden">
+      <Slider {...settings} className='overflow-hidden'>
         {slides.map((slide, index) => (
           <div>
             <div
@@ -60,6 +61,7 @@ const SimpleSlider = () => {
         ))}
       </Slider>
     </div>
+   
   );
 };
 

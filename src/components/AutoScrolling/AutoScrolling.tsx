@@ -45,22 +45,19 @@ function AutoScrolling() {
   };
 
   return (
-    <div className="mx-auto bg-white flex flex-col justify-center items-center max-w-full h-1/4  overflow-hidden">
-      <h1 className="text center text-xl font-bold my-1">
-        {" "}
-        Our Trusted Customers
-      </h1>
+    <div className="container mx-auto py-8">
+      <h2 className="text-2xl font-bold text-center mb-8">Our Partners</h2>
 
-      <div className="max-w-6xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-        <Slider {...settings}>
+      
+        <Slider {...settings} className='overflow-hidden '>
           {logos.map((item, index) => (
             <div key={index} className="p-4">
-              <img src={item} className="w-2/3 h-2/3 mx-auto" />
+              <img src={item} alt={`Company logo ${index + 1}`} className="mx-auto h-16" />
             </div>
           ))}
         </Slider>
       </div>
-    </div>
+    
   );
 }
 

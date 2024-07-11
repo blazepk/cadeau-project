@@ -6,8 +6,10 @@ import img_1 from "../../assets/artgroup.jpeg";
 import img_2 from "../../assets/premiereng.jpeg";
 import img_3 from "../../assets/livlong.png";
 
+
 const testimonyCard = [
   {
+    id:1,
     name: `Art Group of Industries`,
     img: img_1,
     review: `I just got my hands at the hamper and its
@@ -17,17 +19,17 @@ const testimonyCard = [
         hamper loved it.`,
   },
   {
+    id:2,
     name: `PREMIER ENGINEERING`,
     img: img_2,
     review: `Thank you for making women's day
-        celebrational memorable one for everyone in
+        celebration memorable one for everyone in
         the office with the specially curated
-        hampers. Everyone is loving the Michelle
-        Obama book, a must read for everyone, I
-        guess. Looking forward to working again in
-        the future.`,
+        hampers.Looking forward to working again in
+        the future.Really Like the Concept.`,
   },
   {
+    id:3,
     name: `LIVLONG`,
     img: img_3,
     review: `Wonderful unboxing experience!
@@ -35,10 +37,14 @@ const testimonyCard = [
         categories like electronics, bottles,
         etc. Used their service for Corporate
         Gifting, truly one stop solution for
-        all your gifting needs`,
+        all your gifting needs.`,
   },
 ];
+
 const TestimonialSlider = () => {
+ 
+  
+
   const settings = {
     dots: true,
     infinite: true,
@@ -75,35 +81,33 @@ const TestimonialSlider = () => {
   };
 
   return (
-    <div className="text-center justify-center">
-      <div className="bg-brown-300 mt-10 p-0 text-brown-900">
-        <h1 className="text-3xl font-bold">What our Customers Says</h1>
-      </div>
-      <div className="w-full justify-center px-16 py-6">
-        <Slider {...settings}>
-          {testimonyCard.map((testimonial, index) => (
-            <div key={index} className="text-center p-0">
-              <div className="bg-white h-[350px] w-[250px] text-brown-600 rounded-xl">
-                <img
-                  src={testimonial.img}
-                  alt=""
-                  className="w-22 h-20 rounded-xl mx-auto mb-4"
-                />
-
-                <p className="mt-2 text-brown-900 font-bold">
-                  {" "}
-                  {testimonial.name}
-                </p>
-                <p className="text-sm font-normal text-brown-900 text-justify px-2">
-                  &quot;{testimonial.review}&quot;
-                </p>
-              </div>
+    <div className='container  m-auto'>
+      <p className='text-brown-900 font-bold text-2xl text-center justify-center'>What Our Customers Says</p>
+      <div className=' mt-20'>
+       
+      <Slider {...settings}>
+        {testimonyCard.map((testimonial, index) => (
+          <div key={index} className="bg-white h-[350px] text-brown-900 rounded-xl">
+            <div className="bg-white h-16 rounded-t-xl flex justify-center items-center mt-2">
+              <img className="w-22 h-24 rounded-l p-2 "
+                src={testimonial.img}
+                alt=''
+              />
             </div>
-          ))}
-        </Slider>
-      </div>
+            <div className='flex flex-col justify-center items-center gap-4 p-4'>
+                <p className="text-l font-semibold">{testimonial.name}</p>
+                
+                <p className='text-brown-900'>
+                {testimonial.review}
+              </p>
+              
+            </div>
+          </div>
+          
+        ))}
+      </Slider>
+    </div>
     </div>
   );
 };
-
 export default TestimonialSlider;
