@@ -85,14 +85,16 @@ function Services() {
         </div>
         <div className=' flex flex-col justify-start font-extrabold gap-x-4 gap-y-4 p-6'>
           <h1 className='text-blue '>Browse our selection of corporate gifts today and make your next gifting experience a memorable one!</h1>
+          <div>
           <img src={happy} 
-          alt='' className='rounded-xl mx-auto mb-4'/>
+          alt='' className='rounded-xl  w-full mx-auto mb-4'/>
           <img src={commitment} 
-          alt=''className='rounded-xl mx-auto mb-4'/>
+          alt=''className='rounded-xl w-full mx-auto mb-4'/>
           <img src={selection} 
           alt=''className='rounded-xl mx-auto mb-4'/>
           <img src={gift_5} 
           alt=''className='rounded-xl mx-auto mb-4'/>
+        </div>
         </div>
         </div>
     </>

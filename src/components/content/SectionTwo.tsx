@@ -10,9 +10,27 @@ import img_7 from "../../assets/offerings/gift_7.jpg"
 import img_8 from "../../assets/offerings/gift_8.jpg"
 import img_9 from "../../assets/offerings/gift_9.jpg"
 import img_10 from '../../assets/offerings/gift_10.jpeg'
-import img_11 from '../../assets/offerings/gift_11.jpeg'
+import img_11 from '../../assets/offerings/gift_13.jpeg'
 import img_12 from '../../assets/offerings/gift_12.jpeg'
+import img_13 from '../../assets/offerings/gift_15.jpeg'
+import img_14 from '../../assets/offerings/gift_14.jpeg'
+import img_16 from '../../assets/offerings/gift_16.jpeg'
+import img_17 from '../../assets/offerings/gift_17.jpeg'
+import img_18 from '../../assets/offerings/gift_18.jpeg'
+
 const cards = [
+  {
+    
+    imgSrc: img_17,
+    
+    
+  },
+  {
+    
+    imgSrc: img_18,
+    
+    
+  },
   {
    
     imgSrc: img_1,
@@ -85,6 +103,25 @@ const cards = [
     
     
   },
+  {
+    
+    imgSrc: img_13,
+    
+    
+  },
+  {
+    
+    imgSrc: img_14,
+    
+    
+  },
+  {
+    
+    imgSrc: img_16,
+    
+    
+  },
+  
 ];
 
 function SectionTwo() {
