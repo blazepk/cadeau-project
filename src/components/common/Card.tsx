@@ -10,7 +10,7 @@ function Card({ imgSrc }: Card) {
       <div className="h-80 overflow-hidden">
         <div className='w-full h-full'>
         <img
-          className="p-4 items-center rounded-t-lg"
+          className="p-4 h-full  w-full rounded-t-lg"
           src={`${imgSrc}`}
           alt="product image"
         />
