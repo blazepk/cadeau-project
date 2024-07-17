@@ -8,11 +8,13 @@ function Card({ imgSrc }: Card) {
   return (
     <div className=" max-w-sm bg-white border border-brown-200 rounded-lg shadow ">
       <div className="h-80 overflow-hidden">
+        <div className='w-full h-full'>
         <img
-          className="p-8 rounded-t-lg"
+          className="p-4 items-center rounded-t-lg"
           src={`${imgSrc}`}
           alt="product image"
         />
+        </div>
       </div>
       {/*<div className="px-6 py-4">
         <a href="#">

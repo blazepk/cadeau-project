@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Dlogo from "../../assets/Logo.jpeg";
-import { Link, NavLink } from "react-router-dom";
+
 
 
   const FlowbiteNav1 = () => {
@@ -26,7 +26,7 @@ import { Link, NavLink } from "react-router-dom";
               </button>
           </div>
           <div className={`w-full block flex-row lg:flex lg:items-center justify-between font-semibold lg:w-auto ${isOpen ? 'block' : 'hidden'}`}>
-              <div className="text-sm lg:flex-row ">
+              <div className="text-lg lg:flex-row ">
                   <a href="/" className="block mt-4 lg:inline-block lg:mt-0 text-blue hover:text-orange mr-4">
                       Home
                   </a>
@@ -35,6 +35,9 @@ import { Link, NavLink } from "react-router-dom";
                   </a>
                   <a href="/Services" className="block mt-4 lg:inline-block lg:mt-0 text-blue hover:text-orange mr-4">
                       Services
+                  </a>
+                  <a href="/Policies" className="block mt-4 lg:inline-block lg:mt-0 text-blue hover:text-orange mr-4">
+                      Policies
                   </a>
                   <a href="/Contact" className="block mt-4 lg:inline-block lg:mt-0 text-blue hover:text-orange mr-4">
                       Contact

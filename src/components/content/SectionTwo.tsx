@@ -9,8 +9,9 @@ import img_6 from "../../assets/offerings/gift_6.jpg"
 import img_7 from "../../assets/offerings/gift_7.jpg"
 import img_8 from "../../assets/offerings/gift_8.jpg"
 import img_9 from "../../assets/offerings/gift_9.jpg"
-import img_10 from "../../assets/offerings/gift_1.jpg"
-
+import img_10 from '../../assets/offerings/gift_10.jpeg'
+import img_11 from '../../assets/offerings/gift_11.jpeg'
+import img_12 from '../../assets/offerings/gift_12.jpeg'
 const cards = [
   {
    
@@ -49,16 +50,11 @@ const cards = [
   },
   {
     
-    imgSrc: img_6,
-    
-    
-  },
-  {
-    
     imgSrc: img_7,
     
     
   },
+  
   {
     
     imgSrc: img_8,
@@ -74,6 +70,18 @@ const cards = [
   {
     
     imgSrc: img_10,
+    
+    
+  },
+  {
+    
+    imgSrc: img_11,
+    
+    
+  },
+  {
+    
+    imgSrc: img_12,
     
     
   },
