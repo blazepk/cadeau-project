@@ -16,7 +16,7 @@ const Footer1 = () => {
             <img src={Dlogo} className="h-8" alt="Navbar Logo" />
           
             <span className="self-center text-2xl font-semibold whitespace-nowrap  text-blue">
-            ParkhaVentures
+            Parkha Ventures
             </span>
           </Link>
         </div>
